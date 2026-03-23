@@ -83,26 +83,7 @@ export const HeroSection = () => {
                         Get In Touch
                     </Button>
                 </motion.div>
-
-                <motion.p
-                    className="text-sm text-muted-foreground/60 italic"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.5 }}
-                >
-                    Move your cursor to disturb the water ✦
-                </motion.p>
             </div>
-
-            {/* Scroll Indicator */}
-            <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 2, repeat: Infinity, repeatType: 'reverse' }}
-            >
-                <ChevronDown className="w-6 h-6 text-muted-foreground" />
-            </motion.div>
         </section>
     );
 };
