@@ -74,6 +74,10 @@
         @apply border-border;
     }
 
+    html, body {
+        @apply scrollbar-hide;
+    }
+
     html {
         scroll-behavior: smooth;
     }

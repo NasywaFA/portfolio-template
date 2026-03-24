@@ -155,8 +155,8 @@ export default function SkillsClock() {
   const handBottom = WRAPPER_H - CY;
 
   return (
-    <section className="flex flex-col items-center py-16 px-4">
-      <h2 className="text-2xl font-medium text-center mb-1.5">The UX Journey</h2>
+    <section id="skills" className="flex flex-col items-center py-16 px-4 scroll-mt-24">
+      <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> The UX Journey</h2>
       <p className="text-sm text-muted-foreground text-center max-w-sm mb-10 leading-relaxed">
         A continuous cycle of discovery, creation, and refinement — each skill
         orbiting like hours on a clock.

@@ -4,41 +4,41 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, Linkedin, Instagram, Github, ExternalLink } from "lucide-react";
 
-// ── Social links ─────────────────────────────────────────────────────────────
+// Social links
 const socials = [
   {
     label: "Email",
-    value: "hello@yourname.com",
-    href: "mailto:hello@yourname.com",
+    value: "naviansry@gmail.com",
+    href: "mailto:naviansry@gmail.com",
     icon: Mail,
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/yourname",
-    href: "https://linkedin.com/in/yourname",
+    value: "linkedin.com/in/nasywa-faizah-avianisa",
+    href: "https://www.linkedin.com/in/nasywa-faizah-avianisa-3a0357263/",
     icon: Linkedin,
   },
   {
     label: "Instagram",
-    value: "@yourhandle",
-    href: "https://instagram.com/yourhandle",
+    value: "@araychive",
+    href: "https://www.instagram.com/araychive/",
     icon: Instagram,
   },
   {
     label: "GitHub",
-    value: "github.com/yourname",
-    href: "https://github.com/yourname",
+    value: "github.com/NasywaFA",
+    href: "https://https://github.com/NasywaFA/",
     icon: Github,
   },
-  {
-    label: "Cake.me",
-    value: "cake.me/yourname",
-    href: "https://cake.me/yourname",
-    icon: ExternalLink,
-  },
+  // {
+  //   label: "Cake.me",
+  //   value: "cake.me/yourname",
+  //   href: "https://cake.me/yourname",
+  //   icon: ExternalLink,
+  // },
 ];
 
-// ── Form ──────────────────────────────────────────────────────────────────────
+// Form
 type FormData = { name: string; email: string; message: string };
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -59,13 +59,13 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4">
+    <section id="contact" className="relative py-24 px-4 scroll-mt-24">
       <div className="max-w-5xl mx-auto">
 
         {/* Split layout */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
-          {/* ── Left: Statement + socials ── */}
+          {/* Left: Statement + socials */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export const ContactSection = () => {
 
             {/* Big headline */}
             <h2 className="text-5xl sm:text-6xl font-medium leading-[1.05] mb-6">
-              Let's make<br />
+              Let&apos;s make<br />
               something<br />
               <span className="italic text-muted-foreground">great.</span>
             </h2>
@@ -115,7 +115,7 @@ export const ContactSection = () => {
             </ul>
           </motion.div>
 
-          {/* ── Right: Form ── */}
+          {/* Right: Form */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export const ContactSection = () => {
                 <span className="text-5xl">✉️</span>
                 <h3 className="text-xl font-medium">Message sent!</h3>
                 <p className="text-sm text-muted-foreground max-w-xs">
-                  Thanks for reaching out. I'll get back to you as soon as I can.
+                  Thanks for reaching out. I&apos;ll get back to you as soon as I can.
                 </p>
                 <button
                   onClick={() => setStatus("idle")}

@@ -23,56 +23,57 @@ const certificates: Certificate[] = [
     title: "Google UX Design Professional Certificate",
     issuer: "Google / Coursera",
     date: "2024",
-    url: "#",
+    url: "https://drive.google.com/file/d/1KW0EOZykujxGFljMQ9IrvltrXIdMGbRh/view?usp=drive_link",
     initials: "GUX",
     image: "/certificates/google-ux.jpg",
   },
-  {
-    id: "interaction-design",
-    title: "Interaction Design Specialization",
-    issuer: "UC San Diego",
-    date: "2023",
-    url: "#",
-    initials: "IxD",
-    image: "/certificates/interaction-design.jpg",
-  },
-  {
-    id: "figma-advanced",
-    title: "Advanced Figma Masterclass",
-    issuer: "Designership",
-    date: "2023",
-    url: "#",
-    initials: "FIG",
-    image: "/certificates/figma-advanced.jpg",
-  },
-  {
-    id: "accessibility",
-    title: "Web Accessibility Certification",
-    issuer: "IAAP",
-    date: "2024",
-    url: "#",
-    initials: "A11Y",
-    image: "/certificates/accessibility.jpg",
-  },
-  {
-    id: "product-design",
-    title: "Product Design Certificate",
-    issuer: "Google / Coursera",
-    date: "2023",
-    url: "#",
-    initials: "PD",
-    image: "/certificates/product-design.jpg",
-  },
-  {
-    id: "design-systems",
-    title: "Design Systems Masterclass",
-    issuer: "Figma",
-    date: "2024",
-    url: "#",
-    initials: "DS",
-    image: "/certificates/design-systems.jpg",
-  },
+  // {
+  //   id: "interaction-design",
+  //   title: "Interaction Design Specialization",
+  //   issuer: "UC San Diego",
+  //   date: "2023",
+  //   url: "#",
+  //   initials: "IxD",
+  //   image: "/certificates/interaction-design.jpg",
+  // },
+  // {
+  //   id: "figma-advanced",
+  //   title: "Advanced Figma Masterclass",
+  //   issuer: "Designership",
+  //   date: "2023",
+  //   url: "#",
+  //   initials: "FIG",
+  //   image: "/certificates/figma-advanced.jpg",
+  // },
+  // {
+  //   id: "accessibility",
+  //   title: "Web Accessibility Certification",
+  //   issuer: "IAAP",
+  //   date: "2024",
+  //   url: "#",
+  //   initials: "A11Y",
+  //   image: "/certificates/accessibility.jpg",
+  // },
+  // {
+  //   id: "product-design",
+  //   title: "Product Design Certificate",
+  //   issuer: "Google / Coursera",
+  //   date: "2023",
+  //   url: "#",
+  //   initials: "PD",
+  //   image: "/certificates/product-design.jpg",
+  // },
+  // {
+  //   id: "design-systems",
+  //   title: "Design Systems Masterclass",
+  //   issuer: "Figma",
+  //   date: "2024",
+  //   url: "#",
+  //   initials: "DS",
+  //   image: "/certificates/design-systems.jpg",
+  // },
 ];
+
 
 const StampRing = ({ text }: { text: string }) => (
   <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full" aria-hidden>
@@ -117,7 +118,7 @@ export const CertificatesSection = () => {
   }, [active]);
 
   return (
-    <section id="certificates" className="relative py-24 px-4">
+    <section id="certificates" className="relative py-24 px-4 scroll-mt-24">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}

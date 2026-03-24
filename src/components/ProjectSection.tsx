@@ -15,10 +15,9 @@ interface Project {
   tools: string[];
   caseStudyUrl: string;
   githubUrl?: string;
-  // Visual config for the bento card
   emoji: string;
   size: "large" | "medium" | "small" | "tall";
-  accent: string; // tailwind gradient classes
+  accent: string;
   textLight?: boolean;
 }
 
@@ -42,21 +41,21 @@ const projects: Project[] = [
     textLight: false,
   },
   {
-    id: "mindspace",
-    title: "MindSpace",
-    subtitle: "Wellness App",
-    year: "2024",
-    tagline: "Your mind, beautifully held.",
+    id: "pulsehr",
+    title: "PulseHR",
+    subtitle: "HR Platform",
+    year: "2023",
+    tagline: "People ops, finally human.",
     problem:
-      "Mental health apps felt clinical and impersonal, leading to low engagement and abandoned habits.",
+      "HR teams were drowning in spreadsheets and disparate tools, losing visibility over their most important asset — people.",
     solution:
-      "A warm, illustrative meditation app with personalized journeys and gentle micro-interactions.",
-    tools: ["Sketch", "Principle", "UserTesting", "Miro"],
+      "An integrated HR platform with real-time org charts, mood tracking, and automated onboarding flows.",
+    tools: ["Figma", "Maze", "Airtable", "Zeplin"],
     caseStudyUrl: "#",
     githubUrl: "#",
-    emoji: "🧘",
-    size: "small",
-    accent: "from-violet-600/30 via-fuchsia-600/20 to-transparent",
+    emoji: "🫀",
+    size: "tall",
+    accent: "from-rose-600/30 via-orange-600/20 to-transparent",
     textLight: false,
   },
   {
@@ -75,24 +74,6 @@ const projects: Project[] = [
     emoji: "🌱",
     size: "small",
     accent: "from-emerald-600/30 via-teal-600/20 to-transparent",
-    textLight: false,
-  },
-  {
-    id: "pulsehr",
-    title: "PulseHR",
-    subtitle: "HR Platform",
-    year: "2023",
-    tagline: "People ops, finally human.",
-    problem:
-      "HR teams were drowning in spreadsheets and disparate tools, losing visibility over their most important asset — people.",
-    solution:
-      "An integrated HR platform with real-time org charts, mood tracking, and automated onboarding flows.",
-    tools: ["Figma", "Maze", "Airtable", "Zeplin"],
-    caseStudyUrl: "#",
-    githubUrl: "#",
-    emoji: "🫀",
-    size: "tall",
-    accent: "from-rose-600/30 via-orange-600/20 to-transparent",
     textLight: false,
   },
   {
@@ -122,7 +103,7 @@ const projects: Project[] = [
 // small  → col-span-1 row-span-1
 
 const sizeClasses: Record<Project["size"], string> = {
-  large: "md:col-span-2 md:row-span-2",
+  large: "md:col-span-2 md:row-span-1",
   tall: "md:col-span-1 md:row-span-2",
   medium: "md:col-span-1 md:row-span-1",
   small: "md:col-span-1 md:row-span-1",
@@ -139,7 +120,7 @@ export const ProjectsSection = () => {
   const [active, setActive] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="relative py-24 px-4">
+    <section id="projects" className="relative py-24 px-4 scroll-mt-24">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}

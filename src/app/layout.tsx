@@ -1,5 +1,6 @@
 import "./globals.css"
 import { Navbar } from "@/components/Navbar"
+import { WaterCursor } from "@/components/WaterCursor"
 
 export default function RootLayout({
   children,
@@ -10,7 +11,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+
         {children}
+        
+        <WaterCursor />
       </body>
     </html>
   )
