@@ -67,10 +67,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploy
 
-Deploy to [Vercel](https://vercel.com) — connect your repo and add the `NEXT_PUBLIC_FORMSPREE_URL` environment variable in the Vercel dashboard.
+Deploy to [Vercel](https://vercel.com), connect your repo and add the `NEXT_PUBLIC_FORMSPREE_URL` environment variable in the Vercel dashboard.
 
 ---
 
 ## License
 
-MIT — free to use and modify. Credit is appreciated but not required 🙏
+Free to use and modify. Credit is required 🙏
