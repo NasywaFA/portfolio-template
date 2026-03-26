@@ -2,7 +2,7 @@
 
 A clean, modern developer portfolio built with Next.js, Tailwind CSS, and Framer Motion. Feel free to fork and customize it as your own.
 
-> 🔗 **Live demo:** [nasywa.dev](https://nasywa.dev) *(ganti dengan URL kamu)*
+> 🔗 **Live demo:** [Nasywa's Portfolio](https://portfolio-nasywafa.vercel.app/)
 
 ---
 
@@ -38,22 +38,22 @@ npm install
 
 ### 2. Setup environment
 
-Buat file `.env.local` di root project:
+Create a `.env.local` file in the root directory:
 
 ```env
 NEXT_PUBLIC_FORMSPREE_URL=https://formspree.io/f/xxxxxxxx
 ```
 
-> Daftar di [formspree.io](https://formspree.io) untuk mendapatkan endpoint kamu.
+> Sign up at [formspree.io](https://formspree.io) to get your own endpoint.
 
 ### 3. Customize
 
-| File | Isi |
-|------|-----|
-| `src/components/SkillsClock.tsx` | Edit daftar skills & icons |
-| `src/components/ProjectsSection.tsx` | Edit daftar projects |
+| File | Description |
+|------|-------------|
+| `src/components/SkillsClock.tsx` | Edit skills list & icons |
+| `src/components/ProjectsSection.tsx` | Edit projects list |
 | `src/components/ContactSection.tsx` | Edit social links & info |
-| `public/icons/` | Ganti icon skills |
+| `public/icons/` | Replace skill icons |
 
 ### 4. Run dev server
 
@@ -61,16 +61,16 @@ NEXT_PUBLIC_FORMSPREE_URL=https://formspree.io/f/xxxxxxxx
 npm run dev
 ```
 
-Buka [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000).
 
 ---
 
 ## Deploy
 
-Deploy ke [Vercel](https://vercel.com) — tinggal connect repo dan tambah environment variable `NEXT_PUBLIC_FORMSPREE_URL` di dashboard Vercel.
+Deploy to [Vercel](https://vercel.com) — connect your repo and add the `NEXT_PUBLIC_FORMSPREE_URL` environment variable in the Vercel dashboard.
 
 ---
 
 ## License
 
-MIT — bebas dipakai dan dimodifikasi. Kredit diapresiasi tapi nggak wajib 🙏
+MIT — free to use and modify. Credit is appreciated but not required 🙏
