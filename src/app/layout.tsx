@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Navbar } from "@/components/Navbar"
 import { WaterCursor } from "@/components/WaterCursor"
+import { Toaster } from "sonner"
 
 export default function RootLayout({
   children,
@@ -13,6 +14,8 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+        
+        <Toaster position="bottom-right" richColors />
         
         <WaterCursor />
       </body>

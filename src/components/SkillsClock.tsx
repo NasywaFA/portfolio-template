@@ -11,40 +11,46 @@ interface Skill {
 
 const skills: Skill[] = [
   {
-    id: "research",
-    name: "Research",
-    icon: "🔍",
-    desc: "Understanding users through interviews, surveys, and data analysis to uncover real needs and pain points.",
+    id: "nextjs",
+    name: "Next.js",
+    icon: "/icons/nextjs.png",  
+    desc: "Building fast and scalable web applications with SSR and modern React architecture.",
   },
   {
-    id: "wireframing",
-    name: "Wireframing",
-    icon: "✏️",
-    desc: "Sketching low-fidelity blueprints that define information architecture and user flows.",
+    id: "golang",
+    name: "Go + Fiber",
+    icon: "/icons/golang.png",
+    desc: "Developing high-performance backend services and REST APIs with Go and Fiber.",
   },
   {
-    id: "ui-design",
-    name: "UI Design",
-    icon: "🎨",
-    desc: "Creating visually compelling interfaces with attention to typography, color, and hierarchy.",
+    id: "supabase",
+    name: "Supabase",
+    icon: "/icons/supabase.png",
+    desc: "Managing authentication, databases, and real-time features with an open-source backend platform.",
   },
   {
-    id: "prototyping",
-    name: "Prototyping",
-    icon: "⚡",
-    desc: "Building interactive prototypes that bring ideas to life and enable early validation.",
+    id: "php-laravel",
+    name: "PHP + Laravel",
+    icon: "/icons/laravel.png",
+    desc: "Building structured and maintainable web applications using Laravel's MVC framework.",
   },
   {
-    id: "testing",
-    name: "Testing",
-    icon: "🧪",
-    desc: "Conducting usability tests to validate design decisions and iterate based on real feedback.",
+    id: "database",
+    name: "PostgreSQL",
+    icon: "/icons/postgresql.png",
+    desc: "Designing and optimizing relational databases for efficient and reliable data handling.",
   },
   {
-    id: "handoff",
-    name: "Handoff",
-    icon: "🚀",
-    desc: "Delivering clean, developer-ready specs with design tokens, assets, and documentation.",
+    id: "python",
+    name: "Python",
+    icon: "/icons/python.png",
+    desc: "Automating tasks, processing data, and building quick prototypes with Python.",
+  },
+  {
+    id: "figma",
+    name: "Figma",
+    icon: "/icons/figma.png",
+    desc: "Designing intuitive interfaces and prototyping user experiences from concept to handoff.",
   },
 ];
 
@@ -57,7 +63,12 @@ const RETURN_DURATION = 400;
 
 export default function SkillsClock() {
   const [selected, setSelected] = useState<Skill | null>(null);
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setTime(new Date());
+  }, []);
+
   const [positions, setPositions] = useState<{ x: number; y: number }[]>(
     skills.map((_, i) => {
       const angle = (i / skills.length) * 2 * Math.PI - Math.PI / 2;
@@ -145,21 +156,25 @@ export default function SkillsClock() {
     }
   };
 
-  const s = time.getSeconds() + time.getMilliseconds() / 1000;
-  const m = time.getMinutes() + s / 60;
-  const h = (time.getHours() % 12) + m / 60;
+  const s = time ? time.getSeconds() + time.getMilliseconds() / 1000 : 0;
+  const m = time ? time.getMinutes() + s / 60 : 0;
+  const h = time ? (time.getHours() % 12) + m / 60 : 0;
   const secDeg = (s / 60) * 360;
   const minDeg = (m / 60) * 360;
   const hourDeg = (h / 12) * 360;
-  const timeLabel = time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  const timeLabel = time
+    ? time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+    : "--:--";
+
   const handBottom = WRAPPER_H - CY;
 
   return (
     <section id="skills" className="flex flex-col items-center py-16 px-4 scroll-mt-24">
-      <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> The UX Journey</h2>
+      <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> 
+        Skills & Tools
+      </h2>
       <p className="text-sm text-muted-foreground text-center max-w-sm mb-10 leading-relaxed">
-        A continuous cycle of discovery, creation, and refinement — each skill
-        orbiting like hours on a clock.
+        A collection of skills I use to build, design, and solve problems.
       </p>
 
       <div className="flex flex-col lg:flex-row items-center gap-12 flex-wrap justify-center">
@@ -230,7 +245,11 @@ export default function SkillsClock() {
                 }}
                 aria-label={skill.name}
               >
-                {skill.icon}
+                <img 
+                  src={skill.icon} 
+                  alt={skill.name} 
+                  className="w-8 h-8 object-contain"
+                />
               </button>
             );
           })}
@@ -247,7 +266,7 @@ export default function SkillsClock() {
         <div className="max-w-xs min-h-40">
           {selected ? (
             <div className="bg-secondary border border-border rounded-xl p-5">
-              <div className="text-3xl mb-2">{selected.icon}</div>
+              <img src={selected.icon} alt={selected.name} className="w-10 h-10 object-contain mb-2" />
               <h3 className="text-lg font-medium mb-2">{selected.name}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{selected.desc}</p>
               <button

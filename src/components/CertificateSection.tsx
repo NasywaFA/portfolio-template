@@ -19,13 +19,13 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
-    id: "google-ux",
-    title: "Google UX Design Professional Certificate",
-    issuer: "Google / Coursera",
-    date: "2024",
-    url: "https://drive.google.com/file/d/1KW0EOZykujxGFljMQ9IrvltrXIdMGbRh/view?usp=drive_link",
-    initials: "GUX",
-    image: "/certificates/google-ux.jpg",
+    id: "ubig-psw-react-js-and-laravel",
+    title: "UBIG - Pemrogramacion Situs Web React JS + Laravel",
+    issuer: "UBIG",
+    date: "2025",
+    url: "https://drive.google.com/file/d/1KW0EOZykujxGFljMQ9IrvltrXIdMGbRh/view?usp=sharing",
+    initials: "UBIG",
+    image: "/certificates/ubig.png",
   },
   // {
   //   id: "interaction-design",

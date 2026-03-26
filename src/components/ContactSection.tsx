@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, Linkedin, Instagram, Github, ExternalLink } from "lucide-react";
+import { toast } from "sonner";
 
 // Social links
 const socials = [
@@ -52,10 +53,25 @@ export const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // Replace with your actual form submission logic (e.g. Resend, Formspree, etc.)
-    await new Promise((r) => setTimeout(r, 1400));
-    setStatus("sent");
-    setForm({ name: "", email: "", message: "" });
+
+    const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_URL!, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setStatus("sent");
+      setForm({ name: "", email: "", message: "" });
+      toast.success("Message sent!", {
+        description: "I'll get back to you as soon as I can.",
+      });
+    } else {
+      setStatus("idle");
+      toast.error("Something went wrong.", {
+        description: "Please try again later.",
+      });
+    }
   };
 
   return (
@@ -231,7 +247,7 @@ export const ContactSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="text-xs text-muted-foreground">
-            Designed & built by <span className="text-foreground">Your Name</span>
+            Designed & built by <span className="text-foreground">Nasywa Faizah</span>
           </p>
           <p className="text-xs text-muted-foreground/50">
             © {new Date().getFullYear()} All rights reserved

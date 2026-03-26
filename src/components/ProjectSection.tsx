@@ -23,77 +23,77 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: "finflow",
-    title: "FinFlow",
-    subtitle: "Finance Dashboard",
-    year: "2024",
-    tagline: "Making money make sense.",
+    id: "note-sharing-app",
+    title: "Note Sharing App",
+    subtitle: "Note Sharing App",
+    year: "2025",
+    tagline: "The future of note sharing.",
     problem:
       "Users struggled to understand their spending patterns across multiple accounts, leading to financial anxiety and poor decisions.",
     solution:
       "A unified dashboard with AI-powered insights that visualizes financial habits and suggests actionable savings goals.",
-    tools: ["Figma", "FigJam", "Maze", "Notion"],
+    tools: ["Figma", "Naxt.Js", "Golang - Fiber", "PostgreSQL"],
     caseStudyUrl: "#",
-    githubUrl: "#",
-    emoji: "💳",
+    githubUrl: "https://github.com/NasywaFA/note-sharing-app",
+    emoji: "🗒️",
     size: "large",
     accent: "from-blue-600/30 via-indigo-600/20 to-transparent",
     textLight: false,
   },
   {
-    id: "pulsehr",
-    title: "PulseHR",
-    subtitle: "HR Platform",
-    year: "2023",
-    tagline: "People ops, finally human.",
+    id: "portfolio",
+    title: "Portfolio",
+    subtitle: "Nasywa's Portfolio",
+    year: "2026",
+    tagline: "The future of portfolio.",
     problem:
       "HR teams were drowning in spreadsheets and disparate tools, losing visibility over their most important asset — people.",
     solution:
       "An integrated HR platform with real-time org charts, mood tracking, and automated onboarding flows.",
-    tools: ["Figma", "Maze", "Airtable", "Zeplin"],
+    tools: ["Figma", "Naxt.Js"],
     caseStudyUrl: "#",
-    githubUrl: "#",
-    emoji: "🫀",
+    githubUrl: "https://github.com/NasywaFA/portfolio",
+    emoji: "✨",
     size: "tall",
     accent: "from-rose-600/30 via-orange-600/20 to-transparent",
     textLight: false,
   },
   {
-    id: "ecotrace",
-    title: "EcoTrace",
-    subtitle: "Sustainability Scanner",
-    year: "2023",
-    tagline: "Choose better. Every time.",
+    id: "pdf-ai-summarizer",
+    title: "PDF AI Summarizer",
+    subtitle: "PDF AI Summarizer",
+    year: "2026",
+    tagline: "The future of PDF.",
     problem:
       "Consumers wanted to make sustainable choices but lacked clear information at the point of purchase.",
     solution:
       "A barcode scanner revealing product sustainability scores with actionable alternatives, gamified to build habits.",
-    tools: ["Figma", "ProtoPie", "Hotjar", "Linear"],
+    tools: ["Python", "Next.Js", "Google OpenAI", "Golang - Fiber", "PostgreSQL"],
     caseStudyUrl: "#",
-    githubUrl: "#",
-    emoji: "🌱",
+    githubUrl: "https://github.com/NasywaFA/pdf-summarizer-app",
+    emoji: "📄",
     size: "small",
     accent: "from-emerald-600/30 via-teal-600/20 to-transparent",
     textLight: false,
   },
-  {
-    id: "wayfind",
-    title: "Wayfind",
-    subtitle: "Travel Planner",
-    year: "2022",
-    tagline: "Wander with intention.",
-    problem:
-      "Trip planning was fragmented across dozens of tabs and apps, making travel feel like work before it had even started.",
-    solution:
-      "A collaborative itinerary builder with smart suggestions, offline maps, and group consensus features.",
-    tools: ["Figma", "Protopie", "Dovetail", "Notion"],
-    caseStudyUrl: "#",
-    githubUrl: "#",
-    emoji: "🗺️",
-    size: "medium",
-    accent: "from-amber-600/30 via-yellow-600/20 to-transparent",
-    textLight: false,
-  },
+  // {
+  //   id: "wayfind",
+  //   title: "Wayfind",
+  //   subtitle: "Travel Planner",
+  //   year: "2022",
+  //   tagline: "Wander with intention.",
+  //   problem:
+  //     "Trip planning was fragmented across dozens of tabs and apps, making travel feel like work before it had even started.",
+  //   solution:
+  //     "A collaborative itinerary builder with smart suggestions, offline maps, and group consensus features.",
+  //   tools: ["Figma", "Protopie", "Dovetail", "Notion"],
+  //   caseStudyUrl: "#",
+  //   githubUrl: "#",
+  //   emoji: "🗺️",
+  //   size: "medium",
+  //   accent: "from-amber-600/30 via-yellow-600/20 to-transparent",
+  //   textLight: false,
+  // },
 ];
 
 // Bento grid layout: 3-column CSS grid
@@ -135,7 +135,7 @@ export const ProjectsSection = () => {
             Selected Work
           </p>
           <h2 className="text-4xl font-medium leading-tight">
-            Projects I've shaped<br />from research to release.
+            Projects I&apos;ve shaped<br />from research to release.
           </h2>
         </motion.div>
 

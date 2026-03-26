@@ -38,7 +38,7 @@ export const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
                     <p className="text-muted-foreground text-sm md:text-base tracking-widest uppercase mb-4">
-                        UI/UX Designer
+                        UI/UX Designer | Full-Stack Developer
                     </p>
                 </motion.div>
 
@@ -57,8 +57,8 @@ export const HeroSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
                 >
-                    Crafting digital experiences that ripple through time — 
-                    where emotion meets intention, and every pixel tells a story.
+                    Creating digital experiences that balance logic, creativity, and user needs.
+                    Turning ideas into intuitive and meaningful products.
                 </motion.p>
 
                 <motion.div
