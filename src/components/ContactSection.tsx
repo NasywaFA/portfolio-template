@@ -9,26 +9,26 @@ import { toast } from "sonner";
 const socials = [
   {
     label: "Email",
-    value: "naviansry@gmail.com",
-    href: "mailto:naviansry@gmail.com",
+    value: "youremail@gmail.com",
+    href: "mailto:youremail@gmail.com",
     icon: Mail,
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/nasywa-faizah-avianisa",
-    href: "https://www.linkedin.com/in/nasywa-faizah-avianisa-3a0357263/",
+    value: "linkedin.com/in/your-linkedIn/",
+    href: "https://www.linkedin.com/in/your-linkedIn/",
     icon: Linkedin,
   },
   {
     label: "Instagram",
-    value: "@araychive",
+    value: "@yourinstagram",
     href: "https://www.instagram.com/araychive/",
     icon: Instagram,
   },
   {
     label: "GitHub",
-    value: "github.com/NasywaFA",
-    href: "https://https://github.com/NasywaFA/",
+    value: "github.com/yourgithub",
+    href: "https://https://github.com/yourgithub/",
     icon: Github,
   },
   // {
@@ -247,7 +247,7 @@ export const ContactSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="text-xs text-muted-foreground">
-            Designed & built by <span className="text-foreground">Nasywa Faizah</span>
+            Designed & built by <span className="text-foreground">Nasywa Faizah</span> {/* DO NOT REMOVE THIS OR REPLACE WITH YOUR NAME */}
           </p>
           <p className="text-xs text-muted-foreground/50">
             © {new Date().getFullYear()} All rights reserved
