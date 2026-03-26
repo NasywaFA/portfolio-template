@@ -52,7 +52,7 @@ const projects: Project[] = [
       "An integrated HR platform with real-time org charts, mood tracking, and automated onboarding flows.",
     tools: ["Figma", "Naxt.Js"],
     caseStudyUrl: "#",
-    githubUrl: "https://github.com/NasywaFA/portfolio",
+    githubUrl: "https://github.com/NasywaFA/portfolio-template",
     emoji: "✨",
     size: "tall",
     accent: "from-rose-600/30 via-orange-600/20 to-transparent",
